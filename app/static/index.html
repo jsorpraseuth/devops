@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="/static/cis444.js"></script>
+		<link rel="stylesheet" href="/static/index.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+	
+    <body>
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Info Side -->
+				<div class="col-md-6">
+					<div class="info-side d-flex align-items-center py-5">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-10 col-xl-6 mx-auto">
+									<img class="laptop center-block" src="https://brandeps.com/icon-download/L/Laptop-icon-vector-08.svg" alt='image'/>
+									<h2 class="text-secondary center-block info-text">Sign In using your personal access tokens credentials.</h2>
+									<h3 class="text-muted center-block info-text">This will take you straight to your configuration dashboard where you can access your configuration files.</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<!-- Login Side -->
+				<div class="col-md-6">
+					<div class="login d-flex align-items-center py-5">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-10 col-xl-7 mx-auto">
+									<h2 class="text-secondary display-4">Sign In</h2>
+									<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+										<div class="form-group mb-3">
+											<input id="inputusername" type="username" formControlName="username"  [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Username" required="" autofocus="" class="form-control border-1 shadow-sm px-4">
+											<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+												<div *ngIf="f.username.errors.required">Username is required.</div>
+												<div *ngIf="f.username.errors.invalid">Username is invalid.</div>
+											 </div>
+										</div>
+										<div class="form-group mb-3">
+											<input id="inputpassword" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" required="" class="form-control border-1 shadow-sm px-4">
+											<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+												<div *ngIf="f.password.errors.required">Password is required.</div>
+												<div *ngIf="f.password.errors.invalid">Password is invalid.</div>
+											 </div>
+										</div>
+										
+										<button type="submit" class="btn btn-green btn-block mb-2 shadow-sm center-block">Sign In</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
+

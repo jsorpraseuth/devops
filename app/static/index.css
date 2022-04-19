@@ -1,0 +1,45 @@
+.container-fluid{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  overflow: hidden;
+}
+
+.login, .image {
+  min-height: 95vh;
+  background-color: white;
+}
+
+.info-side {
+  min-height: 95vh;
+  background-color: #f3f5f5;
+}
+
+.info-text {
+  width: 70%;
+  padding-left: 22px;
+}
+
+.invalid-feedback {
+  margin-left: 25px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-green {
+  color: white;
+  background-color: #0da682;
+}
+
+.laptop {
+  max-width: 45%;
+  max-height: 45%;
+  filter: invert(53%) sepia(64%) saturate(5953%) hue-rotate(143deg) brightness(99%) contrast(90%);
+}
+
+.toolbar-color {
+  color:rgb(240, 240, 240);
+}
